@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { createUser } from '../services/userAPI';
-import Loading from './Loading';
+import Loading from '../components/Loading';
 
 export default class Login extends Component {
   state = {
@@ -10,13 +10,6 @@ export default class Login extends Component {
     isLoading: false,
     shouldRedirect: false,
   };
-
-  // componentDidUpdate(_prevProps, prevState) {
-  //   const { isLoading } = prevState;
-  //   if (isLoading) {
-  //     return <Redirect to="/search" />;
-  //   }
-  // }
 
   changeHandle = ({ target }) => {
     const { name, type } = target;
@@ -40,7 +33,6 @@ export default class Login extends Component {
     const { username } = this.state;
     this.setState({ isLoading: true });
     await createUser({ name: username });
-    // <Redirect to="/search" />
     this.setState({ shouldRedirect: true });
   };
 
