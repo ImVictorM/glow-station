@@ -37,7 +37,7 @@ export default class Login extends Component {
   };
 
   render() {
-    const { buttonIsDisabled, isLoading, shouldRedirect } = this.state;
+    const { buttonIsDisabled, isLoading, shouldRedirect, username } = this.state;
     if (shouldRedirect) {
       return <Redirect to="/search" />;
     }
@@ -50,6 +50,7 @@ export default class Login extends Component {
         <form>
           <input
             name="username"
+            value={ username }
             data-testid="login-name-input"
             type="text"
             placeholder="nome"

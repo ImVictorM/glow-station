@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 import Header from '../components/Header';
+import searchAlbumsAPI from '../services/searchAlbumsAPI';
+import Loading from '../components/Loading';
+import AlbumCard from '../components/AlbumCard';
 
 export default class Search extends Component {
   state = {
     artistName: '',
+    previousName: '',
     buttonIsDisabled: true,
+    artistAlbums: [],
+    isLoading: false,
   };
 
   changeHandle = ({ target }) => {
@@ -25,8 +31,29 @@ export default class Search extends Component {
     });
   };
 
+  fetchAlbums = () => {
+    const { artistName } = this.state;
+    this.setState({
+      previousName: artistName,
+      artistName: '',
+      isLoading: true,
+    }, async () => {
+      const albums = await searchAlbumsAPI(artistName);
+      this.setState({
+        artistAlbums: [...albums],
+        isLoading: false,
+      });
+    });
+  };
+
   render() {
-    const { buttonIsDisabled } = this.state;
+    const {
+      buttonIsDisabled,
+      artistName,
+      artistAlbums,
+      previousName,
+      isLoading,
+    } = this.state;
     return (
       <div data-testid="page-search">
         <Header />
@@ -34,6 +61,7 @@ export default class Search extends Component {
         <form>
           <input
             name="artistName"
+            value={ artistName }
             type="text"
             data-testid="search-artist-input"
             placeholder="search-artist"
@@ -43,10 +71,16 @@ export default class Search extends Component {
             type="button"
             data-testid="search-artist-button"
             disabled={ buttonIsDisabled }
+            onClick={ this.fetchAlbums }
           >
             Pesquisar
           </button>
         </form>
+        {
+          isLoading
+            ? <Loading />
+            : <AlbumCard artistAlbums={ artistAlbums } name={ previousName } />
+        }
       </div>
     );
   }
