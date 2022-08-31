@@ -25,6 +25,7 @@ export default class MusicCard extends Component {
   };
 
   saveFavorite = ({ target }, music) => {
+    console.log(target.id);
     this.setState({ isLoading: true }, async () => {
       await addSong(music);
       await this.getCheckedSongs();
@@ -63,7 +64,7 @@ export default class MusicCard extends Component {
                     <input
                       id={ trackId }
                       data-testid={ `checkbox-music-${trackId}` }
-                      checked={ checkedMusics.some((m) => m.trackId === trackId) }
+                      checked={ checkedMusics.some((song) => song.trackId === trackId) }
                       onChange={ (event) => this.saveFavorite(event, music) }
                       type="checkbox"
                     />
