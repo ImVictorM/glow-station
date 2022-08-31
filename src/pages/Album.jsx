@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import getMusics from '../services/musicsAPI';
 import Loading from '../components/Loading';
-import MusicCard from '../components/AlbumMusics';
+import MusicCard from '../components/MusicCard';
 
 export default class Album extends Component {
   state = {
@@ -31,7 +31,9 @@ export default class Album extends Component {
         <Header />
         <h1>album page</h1>
         {
-          isLoading ? <Loading /> : <MusicCard musics={ musics } />
+          isLoading
+            ? <Loading />
+            : <MusicCard musics={ musics } />
         }
       </div>
     );
