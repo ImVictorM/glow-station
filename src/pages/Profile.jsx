@@ -12,7 +12,6 @@ export default class Profile extends Component {
 
   async componentDidMount() {
     const user = await getUser();
-    console.log(user);
     this.setState({
       user: { ...user },
       isLoading: false,

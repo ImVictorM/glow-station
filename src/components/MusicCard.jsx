@@ -19,7 +19,6 @@ export default class MusicCard extends Component {
   };
 
   saveFavorite = ({ target }, music) => {
-    console.log(target.checked);
     if (target.checked) {
       this.setState({ isLoading: true }, async () => {
         await addSong(music);

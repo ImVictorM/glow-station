@@ -26,7 +26,7 @@ export default class Header extends Component {
     }
     return (
       <header data-testid="header-component">
-        <p data-testid="header-user-name">{`Bem vindo ${username}!`}</p>
+        <p data-testid="header-user-name">{ username }</p>
         <nav>
           <Link
             to="/search"
