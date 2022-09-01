@@ -6,7 +6,6 @@ export default class User extends Component {
   render() {
     const { user } = this.props;
     const { name, email, image, description } = user;
-    console.log(user);
     return (
       <section>
         <div>
@@ -21,8 +20,12 @@ export default class User extends Component {
           </label>
           <Link to="/profile/edit">Editar perfil</Link>
         </div>
-        <p>{email}</p>
-        <p>{description}</p>
+        <label htmlFor="email">
+          <p id="email">{email}</p>
+        </label>
+        <label htmlFor="description">
+          <p id="description">{description}</p>
+        </label>
       </section>
     );
   }
