@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from '../components/Header';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import Loading from '../components/Loading';
-import AlbumCard from '../components/AlbumCard';
+import AlbumList from '../components/AlbumList';
 
 export default class Search extends Component {
   state = {
@@ -79,7 +79,7 @@ export default class Search extends Component {
         {
           isLoading
             ? <Loading />
-            : <AlbumCard artistAlbums={ artistAlbums } name={ previousName } />
+            : <AlbumList artistAlbums={ artistAlbums } name={ previousName } />
         }
       </div>
     );
