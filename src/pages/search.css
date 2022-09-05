@@ -1,0 +1,14 @@
+h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  margin-top: 60px;
+  text-align: center;
+}
+
+form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 600px;
+}

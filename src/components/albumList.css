@@ -1,0 +1,49 @@
+.album-list {
+  background-color: rgb(6, 26, 58);
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: auto;
+  padding: 20px;
+  width: 90%;
+}
+
+.album-card {
+  align-items: center;
+  background-color: rgb(1, 22, 56);
+  border: 1px solid rgba(139, 133, 193, 0.082);
+  border-radius: 5px;
+  display: flex;
+  height: 150px;
+  margin: 10px;
+  padding: 10px;
+  text-decoration: none;
+  width: 310px;
+}
+
+.album-card .album-name {
+  color: rgb(105, 220, 158);
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.album-card .album-artist {
+  color: white;
+}
+
+.album-card img {
+  margin-right: 10px;
+}
+
+.album-result {
+  font-size: 20px;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.album-not-found {
+  color: rgba(255, 255, 255, 0.678);
+  font-size: 14px;
+  text-align: center;
+}

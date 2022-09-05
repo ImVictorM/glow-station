@@ -11,7 +11,7 @@ import ProfileEdit from './pages/ProfileEdit';
 class App extends React.Component {
   render() {
     return (
-      <div>
+      <main>
         <BrowserRouter>
           <Switch>
             <Route path="/album/:id" component={ Album } />
@@ -23,7 +23,7 @@ class App extends React.Component {
             <Route path="*" component={ NotFound } />
           </Switch>
         </BrowserRouter>
-      </div>
+      </main>
     );
   }
 }

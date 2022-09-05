@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMusic } from '@fortawesome/free-solid-svg-icons';
 import { createUser } from '../services/userAPI';
 import Loading from '../components/Loading';
+import './login.css';
 
 export default class Login extends Component {
   state = {
@@ -45,9 +48,15 @@ export default class Login extends Component {
       return <Loading />;
     }
     return (
-      <div data-testid="page-login">
-        <h1>login page</h1>
-        <form>
+      <div data-testid="page-login" className="login">
+        <h1 className="login-title">
+          <div>
+            <span>CHILL</span>
+            <span>STATION</span>
+          </div>
+          <FontAwesomeIcon className="fa-icon" icon={ faMusic } />
+        </h1>
+        <form className="login-form">
           <input
             name="username"
             value={ username }
@@ -55,12 +64,14 @@ export default class Login extends Component {
             type="text"
             placeholder="nome"
             onChange={ this.changeHandle }
+            className="form-input"
           />
           <button
             type="button"
             data-testid="login-submit-button"
             disabled={ buttonIsDisabled }
             onClick={ this.userHandle }
+            className="form-button"
           >
             Entrar
           </button>
