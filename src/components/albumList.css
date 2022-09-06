@@ -4,9 +4,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin: auto;
+  margin: 20px auto;
   padding: 20px;
-  width: 90%;
+  width: 70%;
 }
 
 .album-card {
@@ -15,7 +15,8 @@
   border: 1px solid rgba(139, 133, 193, 0.082);
   border-radius: 5px;
   display: flex;
-  height: 150px;
+  flex-grow: 1;
+  height: 150px; 
   margin: 10px;
   padding: 10px;
   text-decoration: none;
@@ -46,4 +47,25 @@
   color: rgba(255, 255, 255, 0.678);
   font-size: 14px;
   text-align: center;
+}
+
+@media screen and ( max-width : 560px ) {
+
+  .album-list {
+    justify-content: center;
+    padding: 3px;
+    width: 95vw;
+  }
+
+  .album-card {
+    height: 200px;
+    width: 500px;
+  }
+}
+
+@media screen and ( min-width : 1400px ) {
+
+  .album-list {
+    width: 60vw;
+  }
 }

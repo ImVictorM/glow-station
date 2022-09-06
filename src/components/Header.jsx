@@ -8,18 +8,26 @@ export default class Header extends Component {
   state = {
     isLoading: true,
     username: '',
+    image: '',
   };
 
   async componentDidMount() {
-    const { name } = await getUser();
+    const { name, image } = await getUser();
+    let newImage = null;
+    if (!image) {
+      newImage = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png';
+    } else {
+      newImage = image;
+    }
     this.setState({
       username: name,
+      image: newImage,
       isLoading: false,
     });
   }
 
   render() {
-    const { isLoading, username } = this.state;
+    const { isLoading, username, image } = this.state;
     if (isLoading) {
       return (
         <Loading />
@@ -27,12 +35,15 @@ export default class Header extends Component {
     }
     return (
       <header data-testid="header-component">
-        <p
-          data-testid="header-user-name"
-          className="username"
-        >
-          { username }
-        </p>
+        <div className="user">
+          <img src={ image } alt="user" />
+          <p
+            data-testid="header-user-name"
+            className="name"
+          >
+            { username }
+          </p>
+        </div>
         <nav>
           <Link
             to="/search"

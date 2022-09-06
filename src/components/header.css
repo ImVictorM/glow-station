@@ -5,20 +5,32 @@ header {
   color: #011638;
   display: flex;
   font-size: 26px;
-  height: 80px;
+  height: 65px;
   justify-content: space-between;
 }
 
-.username {
+.user {
+  align-items: center;
   background-color: rgb(91, 62, 141);
-  border-radius: 30px;
+  border-radius: 35px;
   color: white;
+  display: flex;
   font-size: 30px;
   font-weight: 700;
   margin-left: 10px;
   min-width: 120px;
-  padding: 10px;
-  text-align: center;
+  padding: 5px;
+}
+
+.user .name {
+  margin: 0 7px;
+}
+
+.user img {
+  background-color: white;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
 }
 
 header nav {
@@ -34,4 +46,51 @@ header nav a {
 
 header nav a:hover {
   color: white;
+}
+
+@media screen and ( max-width : 560px ) {
+
+  header {
+    border-bottom: 1px solid rgb(139, 133, 193);
+    flex-direction: column;
+    font-size: 16px;
+    height: 70px;
+    justify-content: center;
+  }
+
+  .user {
+    align-self: flex-start;
+    font-size: 20px;
+    margin-top: 5px;
+    padding: 3px;
+  }
+
+  .user img {
+    height: 30px;
+    width: 30px;
+  }
+
+  header nav {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    margin-top: 5px;
+    width: 100%;
+  }
+
+  header nav a {
+    font-size: 20px;
+    margin: 0 7px;
+  }
+}
+
+@media screen and ( min-width : 1400px ) {
+
+  .user {
+    margin-left: 20vw;
+  }
+
+  header nav {
+    margin-right: 20vw;
+  }
 }

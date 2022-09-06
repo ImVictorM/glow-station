@@ -59,8 +59,8 @@ export default class Search extends Component {
     return (
       <div data-testid="page-search">
         <Header />
-        <h1>Pesquisar álbums</h1>
-        <form>
+        <h1 className="search-title">Pesquisar álbums</h1>
+        <form className="search-form">
           <input
             name="artistName"
             value={ artistName }

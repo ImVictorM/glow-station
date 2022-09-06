@@ -65,6 +65,7 @@ export default class Login extends Component {
             placeholder="nome"
             onChange={ this.changeHandle }
             className="form-input"
+            maxLength={ 14 }
           />
           <button
             type="button"

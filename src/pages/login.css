@@ -1,10 +1,14 @@
 .login {
   align-items: center;
+  background-color: rgb(21, 3, 56);
+  border: 3px solid rgba(87, 87, 87, 0.137);
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  margin-top: 300px;
-  width: 500px;
+  margin-top: 20vh;
+  padding: 20px;
+  width: 600px;
 }
 
 .login-title {
@@ -24,7 +28,7 @@
 }
 
 .fa-icon:hover {
-  color: rgb(180, 241, 209);
+  color: rgb(105, 220, 158);
 }
 
 .login-title div {
@@ -42,22 +46,14 @@
 
 
 /* re-wring generic classes in index.css */
-.form-input {
-  font-size: 20px;
-  height: 45px;
-  width: 100%;
-}
-
-.form-button {
-  font-size: 20px;
-  height: 45px;
-  width: 150px;
+.login form input {
+  text-align: center;
+  width: 80%;
 }
 
 @media screen and ( max-width : 600px ) {
 
   .login {
-    margin-top: 200px;
     width: 90%;
   }
 

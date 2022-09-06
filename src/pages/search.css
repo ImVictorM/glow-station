@@ -1,14 +1,25 @@
-h1 {
+.search-title {
   font-size: 40px;
   margin-bottom: 20px;
   margin-top: 60px;
   text-align: center;
 }
 
-form {
+.search-form {
   align-items: center;
   display: flex;
   flex-direction: column;
   margin: auto;
   width: 600px;
+}
+
+@media screen and ( max-width : 720px ) {
+
+  .search-title {
+    font-size: 30px;
+  }
+
+  .search-form {
+    width: 80%;
+  }
 }
