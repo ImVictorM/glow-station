@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Loading from './Loading';
 import { getUser } from '../services/userAPI';
-import './header.css';
+import styles from './Header.module.css';
 
 export default class Header extends Component {
   state = {
@@ -35,11 +35,11 @@ export default class Header extends Component {
     }
     return (
       <header data-testid="header-component">
-        <div className="user">
+        <div className={ styles.user }>
           <img src={ image } alt="user" />
           <p
             data-testid="header-user-name"
-            className="name"
+            className={ styles.name }
           >
             { username }
           </p>

@@ -29,7 +29,6 @@ export default class Album extends Component {
     return (
       <div data-testid="page-album">
         <Header />
-        <h1>album page</h1>
         {
           isLoading ? <Loading /> : <AlbumInfo musics={ musics } />
         }

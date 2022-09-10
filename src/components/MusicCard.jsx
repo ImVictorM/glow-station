@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { addSong, getFavoriteSongs, removeSong } from '../services/favoriteSongsAPI';
 import Loading from './Loading';
+import styles from './MusicCard.module.css';
 
 export default class MusicCard extends Component {
   state = {
@@ -42,15 +43,15 @@ export default class MusicCard extends Component {
       return <Loading />;
     }
     return (
-      <div key={ trackId }>
-        <p>{trackName}</p>
+      <div key={ trackId } className={ styles.music }>
+        <p className={ styles.music_name }>{trackName}</p>
         <audio data-testid="audio-component" src={ previewUrl } controls>
           <track kind="captions" />
           O seu navegador não suporta o elemento
           <code>audio</code>
           .
         </audio>
-        <label htmlFor={ trackId }>
+        <label htmlFor={ trackId } className={ styles.music_favorite_label }>
           Favorita
           <input
             id={ trackId }
@@ -58,6 +59,7 @@ export default class MusicCard extends Component {
             checked={ checkedMusics.some((song) => song.trackId === trackId) }
             onChange={ (event) => this.saveFavorite(event, music) }
             type="checkbox"
+            className={ styles.music_favorite_check }
           />
         </label>
       </div>

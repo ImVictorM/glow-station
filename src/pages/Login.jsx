@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMusic } from '@fortawesome/free-solid-svg-icons';
 import { createUser } from '../services/userAPI';
 import Loading from '../components/Loading';
-import './login.css';
+import styles from './Login.module.css';
 
 export default class Login extends Component {
   state = {
@@ -48,15 +48,15 @@ export default class Login extends Component {
       return <Loading />;
     }
     return (
-      <div data-testid="page-login" className="login">
-        <h1 className="login-title">
+      <div data-testid="page-login" className={ styles.login }>
+        <h1 className={ styles.login_title }>
           <div>
             <span>CHILL</span>
             <span>STATION</span>
           </div>
-          <FontAwesomeIcon className="fa-icon" icon={ faMusic } />
+          <FontAwesomeIcon className={ styles.fa_icon } icon={ faMusic } />
         </h1>
-        <form className="login-form">
+        <form className={ styles.login_form }>
           <input
             name="username"
             value={ username }

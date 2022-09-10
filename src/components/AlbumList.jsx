@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import './albumList.css';
+import styles from './AlbumList.module.css';
 
 export default class AlbumList extends Component {
   render() {
@@ -9,8 +9,8 @@ export default class AlbumList extends Component {
     if (artistAlbums.length !== 0) {
       return (
         <section>
-          <p className="album-result">{`Resultado de álbuns de: ${name}`}</p>
-          <div className="album-list">
+          <p className={ styles.album_result }>{`Resultado de álbuns de: ${name}`}</p>
+          <div className={ styles.album_list }>
             {
               artistAlbums.map((album) => {
                 const { artistName, artworkUrl100, collectionName, collectionId } = album;
@@ -19,12 +19,12 @@ export default class AlbumList extends Component {
                     data-testid={ `link-to-album-${collectionId}` }
                     to={ `/album/${collectionId}` }
                     key={ collectionId }
-                    className="album-card"
+                    className={ styles.album_card }
                   >
                     <img src={ artworkUrl100 } alt="album art" />
                     <div>
-                      <p className="album-name">{collectionName}</p>
-                      <p className="album-artist">{artistName}</p>
+                      <p className={ styles.album_name }>{collectionName}</p>
+                      <p className={ styles.album_artist }>{artistName}</p>
                     </div>
                   </Link>
                 );
@@ -35,7 +35,7 @@ export default class AlbumList extends Component {
       );
     }
     return (
-      <p className="album-not-found">Nenhum álbum foi encontrado</p>
+      <p className={ styles.album_not_found }>Nenhum álbum foi encontrado</p>
     );
   }
 }

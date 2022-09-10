@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import Loading from '../components/Loading';
 import AlbumList from '../components/AlbumList';
-import './search.css';
+import styles from './Search.module.css';
 
 export default class Search extends Component {
   state = {
@@ -59,8 +59,8 @@ export default class Search extends Component {
     return (
       <div data-testid="page-search">
         <Header />
-        <h1 className="search-title">Pesquisar álbums</h1>
-        <form className="search-form">
+        <h1 className={ styles.search_title }>Pesquisar álbums</h1>
+        <form className={ styles.search_form }>
           <input
             name="artistName"
             value={ artistName }

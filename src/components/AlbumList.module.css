@@ -1,4 +1,4 @@
-.album-list {
+.album_list {
   background-color: rgb(6, 26, 58);
   border-radius: 10px;
   display: flex;
@@ -9,41 +9,46 @@
   width: 70%;
 }
 
-.album-card {
+.album_card {
   align-items: center;
   background-color: rgb(1, 22, 56);
   border: 1px solid rgba(139, 133, 193, 0.082);
   border-radius: 5px;
   display: flex;
-  flex-grow: 1;
+  flex: 1 0 310px;
   height: 150px;
   margin: 10px;
   padding: 10px;
   text-decoration: none;
-  width: 310px;
 }
 
-.album-card .album-name {
+
+.album_card:hover {
+  box-shadow: 0 0 7px 1px rgb(105, 220, 158);
+}
+
+
+.album_card .album_name {
   color: rgb(105, 220, 158);
   font-size: 20px;
   margin-bottom: 20px;
 }
 
-.album-card .album-artist {
+.album_card .album_artist {
   color: white;
 }
 
-.album-card img {
+.album_card img {
   margin-right: 10px;
 }
 
-.album-result {
+.album_result {
   font-size: 20px;
   margin: 15px 0;
   text-align: center;
 }
 
-.album-not-found {
+.album_not_found {
   color: rgba(255, 255, 255, 0.678);
   font-size: 14px;
   text-align: center;
@@ -51,13 +56,13 @@
 
 @media screen and ( max-width : 560px ) {
 
-  .album-list {
+  .album_list {
     justify-content: center;
     padding: 3px;
     width: 95vw;
   }
 
-  .album-card {
+  .album_card {
     height: 200px;
     width: 500px;
   }
@@ -65,7 +70,7 @@
 
 @media screen and ( min-width : 1400px ) {
 
-  .album-list {
+  .album_list {
     width: 60vw;
   }
 }

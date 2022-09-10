@@ -1,0 +1,48 @@
+.album_musics {
+  align-items: center;
+  background-color: rgb(6, 26, 58);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 80px auto;
+  padding: 20px 0;
+  width: 50vw;
+}
+
+.album_info_container {
+  align-items: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.album_name {
+  color: rgb(105, 220, 158);
+  font-size: 26px;
+}
+
+.album_info_container img {
+  margin-right: 10px;
+  width: 150px;
+}
+
+.album_info {
+  font-size: 20px;
+  margin-top: 17px;
+}
+
+@media screen and ( max-width : 860px ) {
+
+  .album_musics {
+    background-color: rgb(1, 22, 56);
+    width: 100vw;
+  }
+}
+
+@media screen and ( min-width : 1400px ) {
+
+  .album_musics {
+    width: 40vw;
+  }
+}
