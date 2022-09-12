@@ -15,7 +15,8 @@ header {
   border-radius: 35px;
   color: white;
   display: flex;
-  font-size: 30px;
+  font-family: monospace;
+  font-size: 20px;
   font-weight: 700;
   margin-left: 10px;
   min-width: 120px;
@@ -39,8 +40,9 @@ header nav {
 
 header nav a {
   color: rgb(91, 62, 141);
+  font-size: 22px;
   font-weight: 700;
-  margin: 0 10px;
+  margin: 0 5px;
   text-decoration: none;
 }
 
@@ -87,10 +89,16 @@ header nav a:hover {
 @media screen and ( min-width : 1400px ) {
 
   .user {
+    font-size: 30px;
     margin-left: 20vw;
   }
 
   header nav {
     margin-right: 20vw;
+  }
+
+  header nav a {
+    font-size: 30px;
+    margin: 0 10px;
   }
 }

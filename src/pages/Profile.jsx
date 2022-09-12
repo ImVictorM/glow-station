@@ -23,7 +23,6 @@ export default class Profile extends Component {
     return (
       <div data-testid="page-profile">
         <Header />
-        <h1>profile page</h1>
         {
           isLoading ? <Loading /> : <User user={ user } />
         }

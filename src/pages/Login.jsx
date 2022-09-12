@@ -34,8 +34,9 @@ export default class Login extends Component {
 
   userHandle = async () => {
     const { username } = this.state;
+    const defaultImage = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png';
     this.setState({ isLoading: true });
-    await createUser({ name: username });
+    await createUser({ name: username, image: defaultImage });
     this.setState({ shouldRedirect: true });
   };
 

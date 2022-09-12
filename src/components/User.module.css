@@ -1,0 +1,123 @@
+.user {
+  align-items: flex-start;
+  background-color: rgb(6, 26, 58);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  margin: 80px auto 20px;
+  padding: 30px;
+  width: 80vw;
+}
+
+.user label {
+  font-size: 18px;
+  margin: 7px 0;
+  min-width: 20%;
+  width: auto;
+}
+
+.highlight {
+  background-color: rgb(1, 22, 56);
+  border-radius: 5px;
+  font-size: 22px;
+  min-height: 30px;
+  min-width: 250px;
+  padding: 10px;
+}
+
+.user img {
+  border-radius: 50%;
+  margin: 20px;
+  width: 200px;
+}
+
+.user_details {
+  display: flex;
+}
+
+.user_details_info {
+  margin-left: 15px;
+}
+
+.user_details_info_link {
+  background-color: rgb(91, 62, 141);
+  border-radius: 5px;
+  color: white;
+  display: block;
+  font-size: 20px;
+  margin-top: 25px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  width: 150px;
+}
+
+.user_details_info_link:hover {
+  background-color: rgb(84, 49, 143);
+}
+
+.user_details_info_name {
+  color: rgb(105, 220, 158);
+  font-size: 40px;
+}
+
+.user_email {
+  height: 40px;
+  width: 350px;
+}
+
+.user_description {
+  min-height: 150px;
+  width: 70vw;
+}
+
+@media screen and ( max-width : 560px ) {
+
+  .user {
+    align-items: flex-start;
+    padding: 0 10px;
+    width: 100vw;
+  }
+
+  .user label {
+    width: 100%;
+  }
+
+  .user img {
+    width: 170px;
+  }
+
+  .user_email {
+    align-self: flex-start;
+    width: 100%;
+  }
+
+  .user_details {
+    align-items: center;
+    align-self: center;
+    flex-direction: column;
+  }
+
+  .user_details_info {
+    margin: 0;
+  }
+
+  .user_description {
+    width: 100%;
+  }
+
+  .user_details_info_link {
+    margin: 25px auto 10px;
+  }
+}
+
+@media screen and ( min-width : 1400px ) {
+
+  .user {
+    width: 900px;
+  }
+
+  .user_description {
+    width: 800px;
+  }
+}

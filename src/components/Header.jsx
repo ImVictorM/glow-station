@@ -13,15 +13,10 @@ export default class Header extends Component {
 
   async componentDidMount() {
     const { name, image } = await getUser();
-    let newImage = null;
-    if (!image) {
-      newImage = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png';
-    } else {
-      newImage = image;
-    }
+
     this.setState({
       username: name,
-      image: newImage,
+      image,
       isLoading: false,
     });
   }

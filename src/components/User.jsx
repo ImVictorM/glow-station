@@ -1,30 +1,59 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import styles from './User.module.css';
 
 export default class User extends Component {
   render() {
     const { user } = this.props;
     const { name, email, image, description } = user;
     return (
-      <section>
-        <div>
+      <section className={ styles.user }>
+        <div className={ styles.user_details }>
           <img
             src={ image }
             alt="user"
             data-testid="profile-image"
           />
-          <label htmlFor="name">
-            Nome
-            <p id="name">{name}</p>
-          </label>
-          <Link to="/profile/edit">Editar perfil</Link>
+          <div className={ styles.user_details_info }>
+            <label htmlFor="name">
+              Nome
+              <p
+                id="name"
+                className={ `${styles.user_details_info_name}` }
+              >
+                {name}
+
+              </p>
+            </label>
+            <Link
+              className={ styles.user_details_info_link }
+              to="/profile/edit"
+            >
+              Editar perfil
+
+            </Link>
+          </div>
         </div>
         <label htmlFor="email">
-          <p id="email">{email}</p>
+          Email
+          <p
+            id="email"
+            className={ `${styles.highlight} ${styles.user_email}` }
+          >
+            {email}
+
+          </p>
         </label>
         <label htmlFor="description">
-          <p id="description">{description}</p>
+          Descrição
+          <p
+            className={ `${styles.highlight} ${styles.user_description}` }
+            id="description"
+          >
+            {description}
+
+          </p>
         </label>
       </section>
     );

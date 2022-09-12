@@ -23,7 +23,6 @@ export default class ProfileEdit extends Component {
     return (
       <div data-testid="page-profile-edit">
         <Header />
-        <h1>profile edit page</h1>
         {
           isLoading ? <Loading /> : <EditUserForm user={ user } />
         }

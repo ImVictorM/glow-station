@@ -1,8 +1,9 @@
 .login {
   align-items: center;
-  background-color: rgb(21, 3, 56);
-  border: 3px solid rgba(87, 87, 87, 0.137);
+  background-color: rgb(6, 26, 58);
+  border: 0.5px solid rgb(105, 220, 159);
   border-radius: 20px;
+  box-shadow: 0 0 10px rgb(105, 220, 159);
   display: flex;
   flex-direction: column;
   margin: 0 auto;
