@@ -12,6 +12,7 @@ export default class Search extends Component {
     buttonIsDisabled: true,
     artistAlbums: [],
     isLoading: false,
+    fetchTriggered: false,
   };
 
   changeHandle = ({ target }) => {
@@ -43,6 +44,7 @@ export default class Search extends Component {
       this.setState({
         artistAlbums: [...albums],
         isLoading: false,
+        fetchTriggered: true,
       });
     });
   };
@@ -54,12 +56,13 @@ export default class Search extends Component {
       artistAlbums,
       previousName,
       isLoading,
+      fetchTriggered,
     } = this.state;
 
     return (
       <div data-testid="page-search">
         <Header />
-        <h1 className={ styles.search_title }>Pesquisar álbums</h1>
+        <h1 className={ styles.search_title }>Pesquisar álbuns</h1>
         <form className={ styles.search_form }>
           <input
             name="artistName"
@@ -68,7 +71,7 @@ export default class Search extends Component {
             data-testid="search-artist-input"
             placeholder="artist-name"
             onChange={ this.changeHandle }
-            className="form-input"
+            className={ styles.search_input }
           />
           <button
             type="button"
@@ -81,9 +84,11 @@ export default class Search extends Component {
           </button>
         </form>
         {
-          isLoading
-            ? <Loading />
-            : <AlbumList artistAlbums={ artistAlbums } name={ previousName } />
+          isLoading && <Loading />
+        }
+        {
+          fetchTriggered
+            && <AlbumList artistAlbums={ artistAlbums } name={ previousName } />
         }
       </div>
     );

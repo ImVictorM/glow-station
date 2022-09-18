@@ -46,7 +46,9 @@ export default class Login extends Component {
       return <Redirect to="/search" />;
     }
     if (isLoading) {
-      return <Loading />;
+      return (
+        <div className={ styles.loadingHeader }><Loading /></div>
+      );
     }
     return (
       <div data-testid="page-login" className={ styles.login }>
