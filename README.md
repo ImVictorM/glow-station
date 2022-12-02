@@ -13,15 +13,14 @@ In this application, you can play songs from the most celebrated bands and artis
 - View the profile of the logged-in person;
 - Edit the profile of the logged-in person.
 
-
 Page URL: https://imvictorm.github.io/Glow-Station/
 
 ### Acquired Knowledge 📖
 In this project, I was able to:
 
 - Make requests and consume data from an API;
-- Use the lifecycles of a React component;
-- Using a setState function to ensure that certain code is only executed after the state is updated
+- Use the lifecycle of a React component;
+- Use a setState function to ensure that certain code is only executed after the state is updated;
 - Use the BrowserRouter (Router) component correctly;
 - Create routes, mapping the URL path with the corresponding component, via Route;
 - Use Switch from React Router;
