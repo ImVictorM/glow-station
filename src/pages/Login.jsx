@@ -54,7 +54,7 @@ export default class Login extends Component {
       <div data-testid="page-login" className={ styles.login }>
         <h1 className={ styles.login_title }>
           <div>
-            <span>CHILL</span>
+            <span>GLOW</span>
             <span>STATION</span>
           </div>
           <FontAwesomeIcon className={ styles.fa_icon } icon={ faMusic } />
