@@ -1,46 +1,33 @@
 # Glow Station 🎶
-## Project Context
+## Project Context 💡
 
 In this application, you can play songs from the most celebrated bands and artists, create a list of favorite songs, and edit the user's profile. This application is capable of:
 
 - Login;
-
 - Search for a band or artist;
-
 - List available albums by that band or artist;
-
 - View songs from a selected album;
-
 - Play a preview of songs from this album;
-
 - Favorite and unfavorite songs;
-
 - View the list of favorite songs;
-
 - View the profile of the logged-in person;
-
 - Edit the profile of the logged-in person.
 
 
 Page URL: https://imvictorm.github.io/Glow-Station/
 
+### Acquired Knowledge 📖
 In this project, I was able to:
 
 - Make requests and consume data from an API;
-
 - Use the lifecycles of a React component;
-
 - Using a setState function to ensure that certain code is only executed after the state is updated
-
 - Use the BrowserRouter (Router) component correctly;
-
 - Create routes, mapping the URL path with the corresponding component, via Route;
-
 - Use Switch from React Router;
-
 - Create navigation links in the application with the Link component.
 
-## Used Technologies
+## Used Technologies 🧰
 <table>
     <thead>
         <tr>
@@ -95,7 +82,7 @@ In this project, I was able to:
     </tbody>
 </table>
 
-## Running the application
+## Running the application ⚙️
 
 1. Clone and enter this repository
 ```
