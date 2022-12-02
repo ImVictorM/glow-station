@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Glow-Station/static/css/main.ea0bf427.css",
+    "main.js": "/Glow-Station/static/js/main.809d1620.js",
+    "index.html": "/Glow-Station/index.html",
+    "main.ea0bf427.css.map": "/Glow-Station/static/css/main.ea0bf427.css.map",
+    "main.809d1620.js.map": "/Glow-Station/static/js/main.809d1620.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ea0bf427.css",
+    "static/js/main.809d1620.js"
+  ]
+}
