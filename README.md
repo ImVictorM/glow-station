@@ -36,9 +36,9 @@ In this project, I was able to:
 
 - Create routes, mapping the URL path with the corresponding component, via Route;
 
-- Use Switch from React Router
+- Use Switch from React Router;
 
-- Create navigation links in the application with the Link component;
+- Create navigation links in the application with the Link component.
 
 ## Used Technologies
 <table>
