@@ -27,6 +27,7 @@
 
 .user img {
   border-radius: 50%;
+  height: 200px;
   margin: 20px;
   width: 200px;
 }
@@ -84,6 +85,7 @@
   }
 
   .user img {
+    height: 170px;
     width: 170px;
   }
 
